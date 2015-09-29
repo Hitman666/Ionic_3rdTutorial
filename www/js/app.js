@@ -16,9 +16,9 @@ angular.module('app', ['ionic', 'calculator'])
         };
 
 
-        if (window.AdMob) {
+        if (AdMob) {
             $rootScope.admob = "YES ADMOB";
-            window.AdMob.createBanner({
+            AdMob.createBanner({
                 adId: admobid.banner,
                 position: AdMob.AD_POSITION.TOP_CENTER,
                 autoShow: true

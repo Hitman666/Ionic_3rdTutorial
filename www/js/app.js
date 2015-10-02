@@ -8,22 +8,31 @@ angular.module('app', ['ionic', 'calculator'])
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
         }
 
-        $rootScope.admob = "NO ADMOB";
+         var admobid = {
+            banner: '',
+            interstitial: 'ca-app-pub-7957971173858308/3674658165'
+        };
 
-        var admobid = {
+        // select the right Ad Id according to platform
+        var admobid = {};
+        admobid = {
             banner: 'ca-app-pub-7957971173858308/9721191760',
             interstitial: 'ca-app-pub-7957971173858308/3674658165'
         };
 
-
         if (AdMob) {
-            $rootScope.admob = "YES ADMOB";
             AdMob.createBanner({
                 adId: admobid.banner,
-                position: AdMob.AD_POSITION.TOP_CENTER,
+                position: AdMob.AD_POSITION.BOTTOM_CENTER,
                 autoShow: true
             });
+
+            AdMob.prepareInterstitial({
+                adId:admobid.interstitial, 
+                autoShow:false
+            });
         }
+
     });
 })
 

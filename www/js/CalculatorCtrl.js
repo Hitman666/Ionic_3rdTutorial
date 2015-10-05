@@ -1,5 +1,5 @@
 angular.module('calculator', [])
-.controller('CalculatorCtrl', function($scope, $rootScope){
+.controller('CalculatorCtrl', function($scope, $rootScope, $ionicPopup){
 	$scope.result = '';
 
 	$scope.counter = 1;
@@ -8,7 +8,21 @@ angular.module('calculator', [])
 			$scope.result = '';
 		}
 		else if (btn == '='){
-			$scope.result = eval($scope.result);
+			if ($scope.result == ''){
+				return;
+			}
+
+			try {
+				$scope.result = eval($scope.result);
+			}
+			catch (err) {
+				$ionicPopup.alert({
+			    	title: 'Malformed input',
+			    	template: "Ooops, please try again..."
+			   	});
+
+				$scope.result = '';		
+			}
 
 			//on every 5th result show the Interstitial ad one second after the result appears
 			if ($scope.counter++ == 5){
@@ -22,24 +36,4 @@ angular.module('calculator', [])
 			$scope.result += btn;	
 		}
 	};
-
-	$scope.testadmob = function(){
-
-		if (AdMob) {
-            $rootScope.admob = "YES ADMOB";
-            AdMob.createBanner({
-                adId: admobid.banner,
-                position: AdMob.AD_POSITION.TOP_CENTER,
-                autoShow: true
-            });
-        }
-        else{
-        	$rootScope.admob = "SRAJE";
-        }
-
-	};
-
-	$scope.clickme = function(){
-    	$rootScope.admob = "CLICKED";
-	}
 });

@@ -1,4 +1,12 @@
 {
-  "name": "Ionic_2ndTutorial",
-  "app_id": ""
+  "name": "Ionic_3rdTutorial",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }

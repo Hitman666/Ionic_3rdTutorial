@@ -1,5 +1,5 @@
 angular.module('calculator', [])
-.controller('CalculatorCtrl', function($scope, $rootScope, $ionicPopup){
+.controller('CalculatorCtrl', function($scope, $ionicPopup){
 	$scope.result = '';
 
 	$scope.counter = 1;
@@ -13,7 +13,7 @@ angular.module('calculator', [])
 			}
 
 			try {
-				$scope.result = eval($scope.result);
+				$scope.result = eval($scope.result).toFixed(0);
 			}
 			catch (err) {
 				$ionicPopup.alert({
@@ -27,7 +27,10 @@ angular.module('calculator', [])
 			//on every 5th result show the Interstitial ad one second after the result appears
 			if ($scope.counter++ == 5){
 				setTimeout(function(){
-					AdMob.showInterstitial();
+					if (AdMob){
+						AdMob.showInterstitial();	
+					}
+					
 					$scope.counter = 1;
 				}, 1000);
 			}

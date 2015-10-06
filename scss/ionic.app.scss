@@ -21,3 +21,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+/*my own classes*/
+.myResultInput {
+    font-size: 36px !important;
+    text-align: right !important;
+    width: 100%;
+    line-height: 36px !important;
+    height: 54px !important;
+    padding: 10px !important;
+}

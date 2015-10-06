@@ -6552,16 +6552,16 @@ progress {
   display: inline-block;
   margin: 0;
   padding: 0 12px;
-  min-width: 52px;
-  min-height: 47px;
+  min-width: 68px;
+  min-height: 75px;
   border-width: 1px;
   border-style: solid;
   border-radius: 2px;
   vertical-align: top;
   text-align: center;
   text-overflow: ellipsis;
-  font-size: 16px;
-  line-height: 42px;
+  font-size: 32px;
+  line-height: 70px;
   cursor: pointer; }
   .button:hover {
     color: #444;
@@ -6585,7 +6585,7 @@ progress {
     padding: 0 0 1px 0;
     vertical-align: inherit;
     font-size: 24px;
-    line-height: 41px;
+    line-height: 69px;
     pointer-events: none; }
   .button.icon-left:before {
     float: left;
@@ -6596,8 +6596,8 @@ progress {
     padding-right: 0;
     padding-left: .2em; }
   .button.button-block, .button.button-full {
-    margin-top: 10px;
-    margin-bottom: 10px; }
+    margin-top: 0px;
+    margin-bottom: 0px; }
   .button.button-light {
     border-color: #ddd;
     background-color: #fff;
@@ -6883,7 +6883,7 @@ progress {
   -webkit-transition: opacity .1s;
   transition: opacity .1s;
   padding: 0 6px;
-  max-height: 42px;
+  max-height: 70px;
   border-color: transparent;
   background: none;
   box-shadow: none; }
@@ -6986,7 +6986,7 @@ a.button {
   overflow: hidden;
   padding: 0 16px;
   width: 0;
-  border-width: 1px 0px 1px 1px;
+  border-width: 1px;
   border-radius: 0;
   text-align: center;
   text-overflow: ellipsis;
@@ -7699,3 +7699,12 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+/*my own classes*/
+.myResultInput {
+  font-size: 36px !important;
+  text-align: right !important;
+  width: 100%;
+  line-height: 36px !important;
+  height: 54px !important;
+  padding: 10px !important; }

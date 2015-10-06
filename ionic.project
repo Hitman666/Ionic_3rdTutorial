@@ -1,6 +1,6 @@
 {
   "name": "Ionic_3rdTutorial",
-  "app_id": "",
+  "app_id": "a82ec345",
   "gulpStartupTasks": [
     "sass",
     "watch"

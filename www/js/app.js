@@ -8,14 +8,7 @@ angular.module('app', ['ionic', 'calculator'])
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
         }
 
-         var admobid = {
-            banner: '',
-            interstitial: 'ca-app-pub-7957971173858308/3674658165'
-        };
-
-        // select the right Ad Id according to platform
-        var admobid = {};
-        admobid = {
+        var admobid = {
             banner: 'ca-app-pub-7957971173858308/9721191760',
             interstitial: 'ca-app-pub-7957971173858308/3674658165'
         };

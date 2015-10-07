@@ -1,31 +1,36 @@
 <ion-view title="SuperSimple Calculator">
-    <ion-content padding="false" class="has-header">
-        <form>
-            <input type="text" placeholder="0" ng-model="result" class="myResultInput" />
-        </form>
-        <div class="button-bar">
-            <button class="button button-stable button-block" ng-click="btnClicked('7')">7</button>
-            <button class="button button-stable button-block" ng-click="btnClicked('8')">8</button>
-            <button class="button button-stable button-block" ng-click="btnClicked('9')">9</button>
-            <button class="button button-energized button-block" ng-click="btnClicked('/')">/</button>
-        </div>
-        <div class="button-bar">
-            <button class="button button-stable button-block" ng-click="btnClicked('4')">4</button>
-            <button class="button button-stable button-block" ng-click="btnClicked('5')">5</button>
-            <button class="button button-stable button-block" ng-click="btnClicked('6')">6</button>
-            <button class="button button-energized button-block" ng-click="btnClicked('*')">x</button>
-        </div>
-        <div class="button-bar">
-            <button class="button button-stable button-block" ng-click="btnClicked('1')">1</button>
-            <button class="button button-stable button-block" ng-click="btnClicked('2')">2</button>
-            <button class="button button-stable button-block" ng-click="btnClicked('3')">3</button>
-            <button class="button button-energized button-block" ng-click="btnClicked('-')">-</button>
-        </div>
-        <div class="button-bar">
-            <button class="button button-assertive button-block" ng-click="btnClicked('C')">C</button>
-            <button class="button button-stable button-block" ng-click="btnClicked('0')">0</button>
-            <button class="button button-positive button-block" ng-click="btnClicked('=')">=</button>
-            <button class="button button-energized button-block" ng-click="btnClicked('+')">+</button>
-        </div>
+    <ion-content padding="false" class="has-header" scroll="false">
+        <section class = "home-container">
+            <div class="myInputRow">
+                <form>
+                    <input type="text" placeholder="0" ng-model="result" class="myResultInput" />
+                </form>
+            </div>
+        
+            <div class="button-bar row">
+                <button class="button button-stable button-block" ng-click="btnClicked('7')">7</button>
+                <button class="button button-stable button-block" ng-click="btnClicked('8')">8</button>
+                <button class="button button-stable button-block" ng-click="btnClicked('9')">9</button>
+                <button class="button button-energized button-block" ng-click="btnClicked('/')">/</button>
+            </div>
+            <div class="button-bar row">
+                <button class="button button-stable button-block" ng-click="btnClicked('4')">4</button>
+                <button class="button button-stable button-block" ng-click="btnClicked('5')">5</button>
+                <button class="button button-stable button-block" ng-click="btnClicked('6')">6</button>
+                <button class="button button-energized button-block" ng-click="btnClicked('*')">x</button>
+            </div>
+            <div class="button-bar row">
+                <button class="button button-stable button-block" ng-click="btnClicked('1')">1</button>
+                <button class="button button-stable button-block" ng-click="btnClicked('2')">2</button>
+                <button class="button button-stable button-block" ng-click="btnClicked('3')">3</button>
+                <button class="button button-energized button-block" ng-click="btnClicked('-')">-</button>
+            </div>
+            <div class="button-bar row">
+                <button class="button button-assertive button-block" ng-click="btnClicked('C')">C</button>
+                <button class="button button-stable button-block" ng-click="btnClicked('0')">0</button>
+                <button class="button button-positive button-block" ng-click="btnClicked('=')">=</button>
+                <button class="button button-energized button-block" ng-click="btnClicked('+')">+</button>
+            </div>
+        </section>
     </ion-content>
 </ion-view>

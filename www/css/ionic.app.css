@@ -7708,3 +7708,15 @@ a.button {
   line-height: 36px !important;
   height: 54px !important;
   padding: 10px !important; }
+
+.home-container {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  height: 100%; }
+
+.home-container > .row {
+  -webkit-flex: 2;
+  padding: 0px !important; }
+
+.home-container > .myInputRow {
+  -webkit-flex: 1 !important; }

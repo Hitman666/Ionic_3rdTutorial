@@ -1,6 +1,6 @@
 # Ionic_3rdTutorial 
 
-![](Calculator.png)
+![](CalculatoriPhone.png)
 
 The link to the tutorial will be published here once its available publically.
 

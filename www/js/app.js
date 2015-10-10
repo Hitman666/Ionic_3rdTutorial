@@ -1,6 +1,6 @@
 angular.module('app', ['ionic', 'calculator'])
 
-.run(function($ionicPlatform, $rootScope) {
+.run(function($ionicPlatform, $rootScope, $ionicPopup) {
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -13,7 +13,17 @@ angular.module('app', ['ionic', 'calculator'])
             interstitial: 'ca-app-pub-7957971173858308/3674658165'
         };
 
+        $ionicPopup.alert({
+                title: 'ha',
+                template: "..."
+            });
+
         if (AdMob) {
+            $ionicPopup.alert({
+                title: 'YES',
+                template: "..."
+            });
+
             AdMob.createBanner({
                 adId: admobid.banner,
                 position: AdMob.AD_POSITION.BOTTOM_CENTER,
@@ -23,6 +33,12 @@ angular.module('app', ['ionic', 'calculator'])
             AdMob.prepareInterstitial({
                 adId:admobid.interstitial, 
                 autoShow:false
+            });
+        }
+        else {
+            $ionicPopup.alert({
+                title: 'NO',
+                template: "..."
             });
         }
 

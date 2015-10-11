@@ -13,17 +13,7 @@ angular.module('app', ['ionic', 'calculator'])
             interstitial: 'ca-app-pub-7957971173858308/3674658165'
         };
 
-        $ionicPopup.alert({
-                title: 'ha',
-                template: "..."
-            });
-
         if (AdMob) {
-            $ionicPopup.alert({
-                title: 'YES',
-                template: "..."
-            });
-
             AdMob.createBanner({
                 adId: admobid.banner,
                 position: AdMob.AD_POSITION.BOTTOM_CENTER,
@@ -35,13 +25,6 @@ angular.module('app', ['ionic', 'calculator'])
                 autoShow:false
             });
         }
-        else {
-            $ionicPopup.alert({
-                title: 'NO',
-                template: "..."
-            });
-        }
-
     });
 })
 
